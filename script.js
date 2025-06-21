@@ -50,11 +50,19 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 function isCharAVowel(char) {
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  return vowels.includes(char.toLowerCase());
+  
+  char = char.toLowerCase();
+
+
+  if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log('Exercise 3 Result:', isCharAVowel('a'));
+console.log('Exercise 3 Result:', isCharAVowel("a"));
+
 
 
 /*
@@ -69,7 +77,7 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 function generateEmail(name, domain) {
-  return `${name}@${domain}`;
+  return name + "@" + domain;
 }
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
